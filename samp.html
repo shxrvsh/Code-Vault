@@ -1,0 +1,1093 @@
+
+<!DOCTYPE html>
+<html>
+    <php
+        require_once("samp.php");
+    ?>
+    <head>
+        <style>
+            body{
+                background-color: #0c0f13;
+            }
+            .top-div
+            {
+                display: block;
+                height:120px;
+                width: 100%;
+                background-color: #0c0f13;
+                
+            }
+            .left-div, .right-div {
+                vertical-align: top;
+            }
+            .down-div
+            {
+                width: 100%;
+                height: 490px;
+                display: block;
+                background-color: #0c0f13;
+            }
+            .top-div-1
+            {
+                display: block;
+                height:70px;
+                width: 100%;
+                background-color: #0c0f13;
+                
+            }
+            .top-div-2
+            {
+                display: block;
+                height:50px;
+                width: 100%;
+                background-color: #0c0f13;
+            }
+            .hamburger-div
+            {
+                height: 42px;
+                width: 42px;
+                display: inline-block;
+                cursor: pointer;
+                display: inline-block;
+            }
+            .hamburger
+            {
+                height: 100%;
+                width: 100%;
+            }
+            .logo-div
+            {
+                height: 45px;
+                width: 45px;
+                overflow-clip-margin: content-box;
+                margin-top: 10px;
+                display: inline-block;
+                cursor: pointer;
+            }
+            .logo
+            {
+                width: 100%;
+                height: 100%;
+            }
+            .name-code-div
+            {
+                height: 45px;
+                width: 100px;
+                display: inline-block;
+                margin-top: 20px;
+                padding-left: 12px;
+                color: aliceblue;
+            }
+            .code-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            
+            .issue-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .pull-request-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .action-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .projects-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+
+            .security-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .insight-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                cursor: pointer;
+                padding-left: 12px;
+            }
+            .settings-div
+            {
+                padding-top: 10px;
+                display: inline-block;
+                color: aliceblue;
+                cursor: pointer;
+                padding-left: 12px;
+            }
+            .down-border
+            {
+                height:0.6px;
+                margin-top: 5px;
+                width: 100%;
+                background-color: aliceblue;
+            }
+            .left-div
+            {
+                border-color: rgb(38, 44, 49);
+                border-style: solid;
+                width: 280px;
+                height: 100%;
+                background-color: #060f1a;
+                margin-right: 2px;
+                display: inline-block;
+            }
+            .right-div
+            {
+                border-color: rgb(38, 44, 49);
+                border-style: solid;
+                height: 100%;
+                background-color: #060f1a;
+                width: 900px;
+                margin-right: 0px;
+                margin-left: 2px;
+                display: inline-block;
+            }
+            .Files-div
+            {
+                color: aliceblue;
+                margin-left: 5px;
+                margin-bottom: 8px;
+                margin-top: 8px;
+                
+            }
+            .drop-down-div
+            {
+                display: inline-block;
+                margin-left:3px ;
+                
+            }
+            .drop-down
+            {
+                height:25px;
+                width: 160px;
+                margin-left: 4px;
+                color: aliceblue;
+                border-radius: 7px;
+                border: none;
+                background-color: #363c44;
+            }
+            .plus
+            {
+                height: 25px;
+                width: 30px;
+                margin-right: 0px;
+                border-radius: 7px;
+                border: none;
+                color: aliceblue;
+                cursor: pointer;
+                background-color: #363c44;
+            }
+            .search
+            {
+                height: 25px;
+                margin-left: 0px;
+                border-radius: 7px;
+                border: none;
+                width: 65px;
+                color: aliceblue;
+                cursor: pointer;
+                background-color: #363c44;
+            }
+            .search-div
+            {
+                margin-top: 6px;
+                margin-left: 6px;
+                
+
+            }
+
+            .go-to-file
+            {
+                height: 19px;
+                width: 260px;
+                border-radius: 5px;
+                border: none;
+                background-color: #363c44;
+                padding-left: 4px;
+            }
+            .create-rep
+            {
+                height: 26px;
+                border-radius: 5px;
+                border: none;
+                width: 200px;
+                background-color: #363c44;
+                padding-left: 4px;
+                margin-left: 20px;
+                color: aliceblue;
+            }
+            .find-rep-input
+            {
+                height: 22px;
+                border-radius: 5px;
+                border: none;
+                background-color: #363c44;
+                padding-left: 4px;
+            }
+            .extra-text-area
+            {
+                height: 19px;
+                width: 200px;
+                border-radius: 5px;
+                border: none;
+                background-color: #363c44;
+                padding-left: 2px;
+                margin-top: 5px;
+                color: aliceblue;
+                margin-left: 4px;
+                
+            }
+            .delete-button
+            {
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                color: aliceblue;
+                height: 19px;
+                margin-left: 2px;
+                background-color: #363c44;
+            }
+            .top-of-right-div
+            {
+                margin-top: 10px;
+                margin-left: 5px;
+            }
+            .right-title-div
+            {
+                padding-left: 10px;
+                display: inline-block;
+                color: aliceblue;
+                font-weight: bold;
+                font-size: 22px;
+            }
+            .right-search-div
+            {
+                display: inline-block;
+        
+            }
+            .right-search
+            {
+                margin-left: 5px;
+                background-color: #363c44;
+                border: none;
+                display: inline-block;
+            }
+            .in-div
+            {
+                display: inline-block;
+                color: aliceblue;
+
+            }
+            .main-div
+            {
+                
+                border: none;
+                border-radius: 5px;
+                height: 18px;
+                width: 40px;
+                padding-left: 6px;
+                display: inline-block;
+                background-color: #1a2d44;
+                color: #1a4f94;
+                display: inline-block;
+                
+            }
+            .cancel-button
+            {
+                color: aliceblue;
+                background-color: #363c44;
+                border-style: none;
+                height: 25px;
+                border-radius: 6px;
+                margin-left: 366px;
+            }
+            .commit-button
+            {
+                color: aliceblue;
+                
+                background-color: #1a5429;
+                border-style: none;
+                height: 25px;
+                border-radius: 6px;
+            }
+            .coding-div
+            {
+                
+                height: 100%;
+                width: 880px;
+
+            }
+            .coding-div-top
+            {
+                border-color: rgb(38, 44, 49);
+                border-style: solid;
+                height: 30px;
+                width: 880px;
+                border-width: 1px;
+                
+            }
+            .coding-div-bottom
+            {
+                
+                border-style: solid;
+                height: 417px;
+               
+                width: 880px;
+                border-width: 1px;
+            }
+            .code-area
+            {
+                height: 380px;
+                width: 860px;
+                margin-left: 7px;
+                margin-top: 10px;
+                background-color: #060f1a;
+                color: aliceblue;
+            }
+            .new-button
+            {
+                width: 40px;
+                height: 31px;
+                margin-top: 16px;
+                margin-left:18px;
+                border: none;
+                cursor: pointer;
+                margin-left: 100px;
+                color: aliceblue;
+                padding-left: 3px;
+                border-radius: 3px;
+                background-color:#236838;
+            }
+            .para-div
+            {
+                border-style: solid;
+                border-color: rgb(38, 44, 49);
+                padding-left: 10px;
+                margin-left: 10px;
+            }
+            .rep-p1
+            {
+            color: aliceblue;
+            }
+            .rep-p2{
+                color: rgb(101, 112, 121);
+                display: inline-block;
+            }
+            .rep-p3
+            {
+            color: aliceblue;
+            padding-left: 20px;
+            }
+            
+            .rep-button
+            {
+                color: aliceblue;
+                
+                background-color: #1a5429;
+                border-style: none;
+                height: 25px;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+            .add-text
+            {
+                color: aliceblue;
+                padding-left:14px;
+            }
+            .rep-name
+            {
+                color: aliceblue;
+                padding-left: 8px;
+                background-color: #363c44;
+                border-radius: 3px;
+                margin-top:5px;
+                border-style: solid;
+                border-width: 1px;
+            }
+
+        </style>
+    </head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+            url: "username.php", // Replace with the path to your PHP script
+            type: "GET",
+            dataType: "json",
+            success: function(data) {
+                //var data1=JSON.parse(data)
+                $("#username-p").html(data.username);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                $("#username-p").html("Error: " + textStatus);
+            }
+            });
+
+            $.ajax({
+            url: "repo-list.php", // Replace with the path to your PHP script
+            type: "GET",
+            dataType: "json",
+            success: function(data) {
+                //var data1=JSON.parse(data)
+                for(i in data){
+                    $(".add-text").html("<a href='callcodepage.php?id="+data[i].repo_id+"\' class=\"rep-name\">"+data[i].repo_name+'</a>');
+                }
+                
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                $("#username-p").html("Error: " + textStatus);
+            }
+            });
+        
+        });
+
+        function create_repo(){
+            
+            $(document).ready(function() {
+                /*var xhr = new XMLHttpRequest();
+                var repo_name=document.querySelector(".create-rep").value;
+                xhr.open("GET", "add-repositories.php?repo_name="+repo_name, true); // Replace with your script path (can be POST for complex data)
+                xhr.onload = function() {
+                    if (xhr.status === 0) {
+                    console.log("Script executed successfully! Response:", xhr.responseText);
+                    // Optionally, handle the response data here if needed
+                    } else {
+                    console.log("Error running script:", xhr.statusText);
+                    }
+                }
+                xhr.onerror = function(error) {
+                    console.error("Error creating repository:", error);
+                };*/
+                var repo_name=document.querySelector(".create-rep").value;
+                $.ajax({
+                url: "add-repositories.php?repo_name="+repo_name, // Replace with the path to your PHP script
+                type: "GET",
+                dataType: "string",
+                success: function(data) {
+                    //var data1=JSON.parse(data)
+                    console.log("pass");
+                    
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log("error"+errorThrown);
+                }
+                });
+                $.ajax({
+                url: "repo-list.php", // Replace with the path to your PHP script
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    //var data1=JSON.parse(data)
+                    var repo_list="";
+                    for(i in data){
+                        repo_list=repo_list+"<a href='callcodepage.php?id="+data[i].repo_id+"\'>"+data[i].repo_name+'</a>'+'<br>';
+                        //$(".add-text").html("<a href='callcodepage.php?id="+data[i].repo_id+"\'>"+data[i].repo_name+'</a>');
+                    }
+            
+                    $(".add-text").html(repo_list);
+                    
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    $("#username-p").html("Error: " + textStatus);
+                }
+                });
+            });
+        }
+    
+    
+    </script>
+    <body>
+        <div>
+            <div class="top-div">
+                <div class="top-div-1">
+                    <div class="hamburger-div">
+                        <img src="hamburger-menu.svg" class="hamburger" >
+                    </div>
+                    <div class="logo-div">
+                        <img src="github-logo.jpeg" class="logo">
+                    </div>
+                    <div class="name-code-div">
+                        <p id="username-p"></p>
+                    </div>
+                </div>
+                <div class="down-border">
+
+                </div>
+            </div>
+            <div class="down-div">
+                <div class="left-div">
+                    <div class="Files-div">
+                        Top Repositories
+                        <button class="new-button">New</button>
+                    </div>
+                    
+                    <div class="drop-down-div">
+                        <input type="text" class="find-rep-input" placeholder="Find a repository...">
+                          
+                          <button class="search">Search</button>
+                    </div>
+                    
+                    <div class="add-text-div">
+                        <p class="add-text" ></p>
+                    </div>
+                </div>
+                <div class="right-div">
+                    <div class="top-of-right-div">
+                        <div class="right-title-div">Home</div>
+                    </div>
+                    <div class="coding-div">
+                        <div class="para-div">
+                            <p class="rep-p1">Start a new repository </p>
+                            <p class="rep-p2">A repository contains all of your project's files, revision history and collaborator discussion </p>
+
+                        </div>
+                        <div class="coding-div-bottom">
+                            <p class="rep-p3">Repository name *</p>
+                            <input type="text" required name="rep-name" class="create-rep" placeholder="name your new repository...">
+                            <button class="rep-button" onclick="create_repo()">Create a new repository</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            let i=0;
+            function add_fun() {
+                var name = document.querySelector(".create-rep").value;
+                i++;
+                let dis = "";
+                for (let j = 0; j < i; j++) {
+                    let uniqueId = `extraText${j}`;
+                    let html = `<div id="${uniqueId}">
+                                    <p class="rep-p2">${name}</p>
+                                    <button class="delete-button" onclick="delete_fun('${uniqueId}')">Delete</button>
+                                </div>`;
+                    dis += html;
+                }
+                document.querySelector(".add-text").innerHTML = dis;
+            }
+
+    function delete_fun(id) {
+        let element = document.getElementById(id);
+        element.remove();
+    }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #0c0f13;
+            }
+            .top-div
+            {
+                display: block;
+                height:120px;
+                width: 100%;
+                background-color: #0c0f13;
+                
+            }
+            .left-div, .right-div {
+                vertical-align: top;
+            }
+            .down-div
+            {
+                width: 100%;
+                height: 490px;
+                display: block;
+                background-color: #0c0f13;
+            }
+            .top-div-1
+            {
+                display: block;
+                height:70px;
+                width: 100%;
+                background-color: #0c0f13;
+                
+            }
+            .top-div-2
+            {
+                display: block;
+                height:50px;
+                width: 100%;
+                background-color: #0c0f13;
+            }
+            .hamburger-div
+            {
+                height: 42px;
+                width: 42px;
+                display: inline-block;
+                cursor: pointer;
+                display: inline-block;
+            }
+            .hamburger
+            {
+                height: 100%;
+                width: 100%;
+            }
+            .logo-div
+            {
+                height: 45px;
+                width: 45px;
+                overflow-clip-margin: content-box;
+                margin-top: 10px;
+                display: inline-block;
+                cursor: pointer;
+            }
+            .logo
+            {
+                width: 100%;
+                height: 100%;
+            }
+            .name-code-div
+            {
+                height: 45px;
+                width: 100px;
+                display: inline-block;
+                margin-top: 20px;
+                padding-left: 12px;
+                color: aliceblue;
+            }
+            .code-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            
+            .issue-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .pull-request-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .action-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .projects-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+
+            .security-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .insight-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                cursor: pointer;
+                padding-left: 12px;
+            }
+            .settings-div
+            {
+                padding-top: 10px;
+                display: inline-block;
+                color: aliceblue;
+                cursor: pointer;
+                padding-left: 12px;
+            }
+            .down-border
+            {
+                height:0.6px;
+                margin-top: 5px;
+                width: 100%;
+                background-color: aliceblue;
+            }
+            .left-div
+            {
+                border-color: rgb(38, 44, 49);
+                border-style: solid;
+                width: 280px;
+                height: 100%;
+                background-color: #060f1a;
+                margin-right: 2px;
+                display: inline-block;
+            }
+            .right-div
+            {
+                border-color: rgb(38, 44, 49);
+                border-style: solid;
+                height: 100%;
+                background-color: #060f1a;
+                width: 900px;
+                margin-right: 0px;
+                margin-left: 170px;
+                display: inline-block;
+            }
+            .Files-div
+            {
+                color: aliceblue;
+                margin-left: 5px;
+                margin-bottom: 8px;
+                margin-top: 8px;
+                
+            }
+            .drop-down-div
+            {
+                display: inline-block;
+                margin-left:3px ;
+                
+            }
+            .drop-down
+            {
+                height:25px;
+                width: 160px;
+                margin-left: 4px;
+                color: aliceblue;
+                border-radius: 7px;
+                border: none;
+                background-color: #363c44;
+            }
+            .plus
+            {
+                height: 25px;
+                width: 30px;
+                margin-right: 0px;
+                border-radius: 7px;
+                border: none;
+                color: aliceblue;
+                cursor: pointer;
+                background-color: #363c44;
+            }
+            .search
+            {
+                height: 25px;
+                margin-left: 0px;
+                border-radius: 7px;
+                border: none;
+                width: 65px;
+                color: aliceblue;
+                cursor: pointer;
+                background-color: #363c44;
+            }
+            .search-div
+            {
+                margin-top: 6px;
+                margin-left: 6px;
+                
+
+            }
+
+            .go-to-file
+            {
+                height: 19px;
+                width: 260px;
+                border-radius: 5px;
+                border: none;
+                background-color: #363c44;
+                padding-left: 4px;
+            }
+            .extra-text-area
+            {
+                height: 19px;
+                width: 200px;
+                border-radius: 5px;
+                border: none;
+                background-color: #363c44;
+                padding-left: 2px;
+                margin-top: 5px;
+                color: aliceblue;
+                margin-left: 4px;
+                
+            }
+            .delete-button
+            {
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                color: aliceblue;
+                height: 19px;
+                margin-left: 2px;
+
+        
+                background-color: #363c44;
+            }
+            .top-of-right-div
+            {
+                margin-top: 10px;
+                margin-left: 5px;
+                border-color: rgb(37, 40, 43);
+                border-style: solid;
+            }
+            .right-title-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            .right-search-div
+            {
+                display: inline-block;
+        
+            }
+            .right-search
+            {
+                margin-left: 5px;
+                background-color: #363c44;
+                border: none;
+                display: inline-block;
+            }
+            .in-div
+            {
+                display: inline-block;
+                color: aliceblue;
+
+            }
+            .main-div
+            {
+                
+                border: none;
+                border-radius: 5px;
+                height: 18px;
+                width: 40px;
+                padding-left: 6px;
+                display: inline-block;
+                background-color: #1a2d44;
+                color: #1a4f94;
+                display: inline-block;
+                
+            }
+            .cancel-button
+            {
+                color: aliceblue;
+                background-color: #363c44;
+                border-style: none;
+                height: 25px;
+                border-radius: 6px;
+                margin-left: 366px;
+                cursor: pointer;
+            }
+            .commit-button
+            {
+                color: aliceblue;
+                cursor: pointer;
+                background-color: #1a5429;
+                border-style: none;
+                height: 25px;
+                border-radius: 6px;
+            }
+            .coding-div
+            {
+                
+                height: 100%;
+                width: 880px;
+                
+
+            }
+            .coding-div-top
+            {
+                border-color: rgb(38, 44, 49);
+                border-style: solid;
+                height: 30px;
+                width: 880px;
+                border-width: 1px;
+                
+            }
+            .coding-div-bottom
+            {
+                
+                border-style: solid;
+                height: 417px;
+               
+                width: 880px;
+                border-width: 1px;
+            }
+            .code-area
+            {
+                height: 380px;
+                width: 860px;
+                margin-left: 7px;
+                margin-top: 10px;
+                background-color: #060f1a;
+                color: aliceblue;
+            }
+            
+            
+
+        </style>
+    </head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+            url: "get-code.php", // Replace with the path to your PHP script
+            type: "GET",
+            dataType: "json",
+            success: function(data) {
+                //var data1=JSON.parse(data)
+                for(i in data){
+                    $(".code-area").html(data[i].repo_code);
+                }
+                
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                $(".code-area").html("Error: " + textStatus);
+            }
+            });
+        
+        });
+    </script>
+    <body>
+        <div>
+            <div class="top-div">
+                <div class="top-div-1">
+                    <div class="logo-div">
+                        <img src="github-logo.jpeg" class="logo">
+                    </div>
+                    <div class="name-code-div">
+                        
+                        <p>Nandikka/Samp</p>
+                    </div>
+                </div>
+                <div class="top-div-2">
+                    
+                    <div class="down-border">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="down-div">
+                
+                <form action="commit-code.php" method="post">
+                    <div class="right-div">
+
+                        <div class="top-of-right-div">
+                            <div class="right-title-div">Pull Requests</div>
+                            
+                        </div>
+                        <div class="coding-div">
+                            <div class="coding-div-bottom">
+                                <p name='repo_code' class="code-area">
+                                    
+                                </p>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <script>
+            function commit()
+            {
+                let code= document.querySelector(".code-area").value;
+                $.ajax({
+                    url: "commit-code.php", // Replace with the path to your PHP script
+                    type: "GET",
+                    dataType: "json",
+                    success: function(data) {
+                        //var data1=JSON.parse(data)
+                        for(i in data){
+                            $(".add-text").html("<a href='callcodepage.php?id="+data[i].repo_id+"\'>"+data[i].repo_name+'</a>');
+                        }
+                        
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        $("#username-p").html("Error: " + textStatus);
+                    }
+                });
+            }
+
+
+
+
+
+            let i=0;
+            function add_fun() {
+                i++;
+                let dis = "";
+                for (let j = 0; j < i; j++) {
+                    let uniqueId = `extraText${j}`;
+                    let html = `<div id="${uniqueId}">
+                                    <input type="text" class="extra-text-area">
+                                    <button class="delete-button" onclick="delete_fun('${uniqueId}')">Delete</button>
+                                </div>`;
+                    dis += html;
+                }
+                document.querySelector(".add-text").innerHTML = dis;
+            }
+
+    function delete_fun(id) {
+        let element = document.getElementById(id);
+        element.remove();
+    }
+        </script>
+    </body>
+</html>
+
+
+

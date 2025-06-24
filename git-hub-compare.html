@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #0c0f13;
+            }
+            .top-div
+            {
+                display: block;
+                height:120px;
+                width: 100%;
+                background-color: #0c0f13;
+                
+            }
+            .left-div, .right-div {
+                vertical-align: top;
+            }
+            .down-border
+            {
+                height:0.6px;
+                margin-top: 5px;
+                width: 100%;
+                background-color: aliceblue;
+            }
+            .down-div
+            {
+                width: 100%;
+                height: 490px;
+                display: block;
+                background-color: #0c0f13;
+            }
+            .top-div-1
+            {
+                display: block;
+                height:70px;
+                width: 100%;
+                background-color: #0c0f13;
+                
+            }
+            .top-div-2
+            {
+                display: block;
+                height:50px;
+                width: 100%;
+                background-color: #0c0f13;
+            }
+            .hamburger-div
+            {
+                height: 42px;
+                width: 42px;
+                display: inline-block;
+                cursor: pointer;
+                display: inline-block;
+            }
+            .hamburger
+            {
+                height: 100%;
+                width: 100%;
+            }
+            .logo-div
+            {
+                height: 45px;
+                width: 45px;
+                overflow-clip-margin: content-box;
+                margin-top: 10px;
+                display: inline-block;
+                cursor: pointer;
+            }
+            .logo
+            {
+                width: 100%;
+                height: 100%;
+            }
+            .name-code-div
+            {
+                height: 45px;
+                width: 100px;
+                display: inline-block;
+                margin-top: 20px;
+                padding-left: 12px;
+                color: aliceblue;
+            }
+            .code-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            
+            .issue-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .pull-request-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .action-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .projects-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+
+            .security-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .insight-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                cursor: pointer;
+                padding-left: 12px;
+            }
+            .settings-div
+            {
+                padding-top: 10px;
+                display: inline-block;
+                color: aliceblue;
+                cursor: pointer;
+                padding-left: 12px;
+            }
+            
+            .left1
+            {
+                border-color: rgb(38, 44, 49);
+                border-style: solid;
+                width: 600px;
+                height: 100%;
+                background-color: #060f1a;
+                margin-right: 2px;
+                display: inline-block;
+            }
+            .left2
+            {
+                height: 100%;
+                width: 100%;
+                border-color: rgb(38, 44, 49);
+                border-style: solid;
+                border-width: 1px;
+                
+            }
+            .left3
+            {
+                height: 100%;
+                width: 100%;
+
+            }
+            .textarea-left
+            {
+               margin-top: 14px;
+                height: 90%;
+                width: 97%;
+                margin-left: 5px;
+                background-color: #060f1a;
+                color: aliceblue;
+            }
+            .left-title
+            {
+                color: aliceblue;
+                margin: 0px;
+                padding-left: 8px;
+                padding-top: 8px;
+                font-size: 18px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .right1
+            {
+                border-color: rgb(38, 44, 49);
+                border-style: solid;
+                width: 600px;
+                height: 100%;
+                vertical-align: top;
+                background-color: #060f1a;
+                margin-right: 2px;
+                display: inline-block;
+            }
+            .right2
+            {
+                height: 100%;
+                width: 100%;
+                border-color: rgb(38, 44, 49);
+                border-style: solid;
+                border-width: 1px;
+                
+            }
+            .right3
+            {
+                height: 100%;
+                width: 100%;
+
+            }
+            .textarea-right
+            {
+               margin-top: 8px;
+                height: 440px;
+                width: 97%;
+                margin-left: 5px;
+                background-color: #060f1a;
+                color: aliceblue;
+            }
+            .right-title
+            {
+                color: aliceblue;
+                margin: 0px;
+                padding-left: 8px;
+                padding-top: 8px;
+                font-size: 18px;
+                display: inline-block;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .commint-button
+            {
+                color: aliceblue;
+                cursor: pointer;
+                background-color: #1a5429;
+                border-style: none;
+                height: 30px;
+                width: 70px;
+                
+                border-radius: 3px;
+                margin-top: 8px;
+                margin-bottom: 0px;
+            }
+            .reject-button
+            {
+                color: rgb(222, 66, 66);
+                cursor: pointer;
+                background-color: #020503;
+                border-style: none;
+                height: 30px;
+                width: 70px;
+                margin-left:300px;
+                border-radius: 3px;
+            
+                
+
+            }
+
+            
+            
+
+        </style>
+    </head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+            url: "get-code-compare1.php", // Replace with the path to your PHP script
+            type: "GET",
+            dataType: "json",
+            success: function(data) {
+                //var data1=JSON.parse(data)
+                for(i in data){
+                    $(".textarea-left").html(data[i].repo_code);
+                }
+                
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                $(".textarea-left").html("Error: " + textStatus);
+            }
+            });
+        
+        
+
+            $.ajax({
+            url: "get-code-compare2.php", // Replace with the path to your PHP script
+            type: "GET",
+            dataType: "json",
+            success: function(data) {
+                //var data1=JSON.parse(data)
+                for(i in data){
+                    $(".textarea-right").html(data[i].repo_code);
+                }
+                
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                $(".textarea-right").html("Error: " + textStatus);
+            }
+            });
+        
+        });
+
+        function rejectreq(){
+            $.ajax({
+            url: "rejectreq.php", // Replace with the path to your PHP script
+            type: "GET",
+            dataType: "string",
+            success: function(data) {
+                console.log("rejected");
+                
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log("reject failure");
+            }
+            });
+        }
+    </script>
+    <body>
+        <div>
+            <div class="top-div">
+                <div class="top-div-1">
+                    
+                    <div class="logo-div">
+                        <img src="github-logo.jpeg" class="logo">
+                    </div>
+                    <div class="name-code-div">
+                        <p>Nandikka/Samp</p>
+                    </div>
+                </div>
+                <div class="top-div-2">
+                    
+                    <div class="down-border">
+
+                    </div>
+
+                </div>
+            </div>
+            <form action="finalcommit.php" method="post">
+            <div class="down-div">
+                <div class="left1">
+                    <div class="left2">
+
+                        <p class="left-title">Original Code:</p>
+                        <div class="left3">
+                            <textarea class="textarea-left"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right1">
+                    <div class="right2">
+                        <p class="right-title">Modified Code:</p>
+                        
+                            <button class="reject-button" onclick="rejectreq()">Reject</button>
+                        
+                        <button class="commint-button" type="submit">Commit</button>
+                        <div class="right">
+                            <textarea name="new_code" class="textarea-right"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+            </div></form>
+        </div>
+
+
+        <script>
+            
+        </script>
+    </body>
+</html>

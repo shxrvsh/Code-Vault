@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #0c0f13;
+            }
+            .top-div
+            {
+                display: block;
+                height:120px;
+                width: 100%;
+                background-color: #0c0f13;
+                
+            }
+            .left-div, .right-div {
+                vertical-align: top;
+            }
+            .down-div
+            {
+                width: 100%;
+                height: 490px;
+                display: block;
+                background-color: #0c0f13;
+            }
+            .top-div-1
+            {
+                display: block;
+                height:70px;
+                width: 100%;
+                background-color: #0c0f13;
+                
+            }
+            .top-div-2
+            {
+                display: block;
+                height:50px;
+                width: 100%;
+                background-color: #0c0f13;
+            }
+            .hamburger-div
+            {
+                height: 42px;
+                width: 42px;
+                display: inline-block;
+                cursor: pointer;
+                display: inline-block;
+            }
+            .hamburger
+            {
+                height: 100%;
+                width: 100%;
+            }
+            .logo-div
+            {
+                height: 45px;
+                width: 45px;
+                overflow-clip-margin: content-box;
+                margin-top: 10px;
+                display: inline-block;
+                cursor: pointer;
+            }
+            .logo
+            {
+                width: 100%;
+                height: 100%;
+            }
+            .name-code-div
+            {
+                height: 45px;
+                width: 100px;
+                display: inline-block;
+                margin-top: 20px;
+                padding-left: 12px;
+                color: aliceblue;
+            }
+            .code-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            
+            .issue-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .pull-request-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .action-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .projects-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+
+            .security-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 12px;
+                cursor: pointer;
+            }
+            .insight-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                cursor: pointer;
+                padding-left: 12px;
+            }
+            .settings-div
+            {
+                padding-top: 10px;
+                display: inline-block;
+                color: aliceblue;
+                cursor: pointer;
+                padding-left: 12px;
+            }
+            .down-border
+            {
+                height:0.6px;
+                margin-top: 5px;
+                width: 100%;
+                background-color: aliceblue;
+            }
+            .left-div
+            {
+                border-color: rgb(38, 44, 49);
+                border-style: solid;
+                width: 280px;
+                height: 100%;
+                background-color: #060f1a;
+                margin-right: 2px;
+                display: inline-block;
+            }
+            .right-div
+            {
+                border-color: rgb(38, 44, 49);
+                border-style: solid;
+                height: 100%;
+                background-color: #060f1a;
+                width: 900px;
+                margin-right: 0px;
+                margin-left: 170px;
+                display: inline-block;
+            }
+            .Files-div
+            {
+                color: aliceblue;
+                margin-left: 5px;
+                margin-bottom: 8px;
+                margin-top: 8px;
+                
+            }
+            .drop-down-div
+            {
+                display: inline-block;
+                margin-left:3px ;
+                
+            }
+            .drop-down
+            {
+                height:25px;
+                width: 160px;
+                margin-left: 4px;
+                color: aliceblue;
+                border-radius: 7px;
+                border: none;
+                background-color: #363c44;
+            }
+            .plus
+            {
+                height: 25px;
+                width: 30px;
+                margin-right: 0px;
+                border-radius: 7px;
+                border: none;
+                color: aliceblue;
+                cursor: pointer;
+                background-color: #363c44;
+            }
+            .search
+            {
+                height: 25px;
+                margin-left: 0px;
+                border-radius: 7px;
+                border: none;
+                width: 65px;
+                color: aliceblue;
+                cursor: pointer;
+                background-color: #363c44;
+            }
+            .search-div
+            {
+                margin-top: 6px;
+                margin-left: 6px;
+                
+
+            }
+
+            .go-to-file
+            {
+                height: 19px;
+                width: 260px;
+                border-radius: 5px;
+                border: none;
+                background-color: #363c44;
+                padding-left: 4px;
+            }
+            .extra-text-area
+            {
+                height: 19px;
+                width: 200px;
+                border-radius: 5px;
+                border: none;
+                background-color: #363c44;
+                padding-left: 2px;
+                margin-top: 5px;
+                color: aliceblue;
+                margin-left: 4px;
+                
+            }
+            .delete-button
+            {
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                color: aliceblue;
+                height: 19px;
+                margin-left: 2px;
+
+        
+                background-color: #363c44;
+            }
+            .top-of-right-div
+            {
+                margin-top: 10px;
+                margin-left: 5px;
+                border-color: rgb(37, 40, 43);
+                border-style: solid;
+            }
+            .right-title-div
+            {
+                display: inline-block;
+                color: aliceblue;
+                padding-left: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            .right-search-div
+            {
+                display: inline-block;
+        
+            }
+            .right-search
+            {
+                margin-left: 5px;
+                background-color: #363c44;
+                border: none;
+                display: inline-block;
+            }
+            .in-div
+            {
+                display: inline-block;
+                color: aliceblue;
+
+            }
+            .main-div
+            {
+                
+                border: none;
+                border-radius: 5px;
+                height: 18px;
+                width: 40px;
+                padding-left: 6px;
+                display: inline-block;
+                background-color: #1a2d44;
+                color: #1a4f94;
+                display: inline-block;
+                
+            }
+            .cancel-button
+            {
+                color: aliceblue;
+                background-color: #363c44;
+                border-style: none;
+                height: 25px;
+                border-radius: 6px;
+                margin-left: 366px;
+                cursor: pointer;
+            }
+            .commit-button
+            {
+                color: aliceblue;
+                cursor: pointer;
+                background-color: #1a5429;
+                border-style: none;
+                height: 25px;
+                border-radius: 6px;
+            }
+            .coding-div
+            {
+                
+                height: 100%;
+                width: 880px;
+                
+
+            }
+            .coding-div-top
+            {
+                border-color: rgb(38, 44, 49);
+                border-style: solid;
+                height: 30px;
+                width: 880px;
+                border-width: 1px;
+                
+            }
+            .coding-div-bottom
+            {
+                
+                border-style: solid;
+                height: 417px;
+               
+                width: 880px;
+                border-width: 1px;
+            }
+            .code-area
+            {
+                height: 380px;
+                width: 860px;
+                margin-left: 7px;
+                margin-top: 10px;
+                background-color: #060f1a;
+                color: aliceblue;
+            }
+            .name,.link,.author
+            {
+                color: aliceblue;
+                display: inline-block;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 19px;
+            }
+            .name
+            {
+                margin-left: 100px;
+            }
+            
+            .author
+            {
+                margin-left: 100px;
+               
+            }
+            .link{
+                margin-left: 100px;
+            }
+            
+            .name-div
+            {
+
+                display: inline-block;
+                border-style: dotted;
+                width: 280px;
+                border-color: #363c44;
+                margin-left: 10px;
+                height: 380px;
+                vertical-align: top;
+            }
+            
+            .author-div
+            {
+                display: inline-block;
+                border-style: dotted;
+                width: 280px;
+                border-color: #363c44;
+                margin-left: 10px;
+                height: 380px;
+                vertical-align: top;
+
+            }
+            .link-div
+            {
+                display: inline-block;
+                border-style: dotted;
+                width: 220px;
+                border-color: #363c44;
+                height: 380px;
+                margin-left: 10px;
+                vertical-align: top;
+            }
+            .names,.authors,.links
+            {
+                height: 100%;
+                width: 100%;
+            }
+            .links-div
+            {
+                margin-left:0;
+                padding-right: 50px;
+                text-align:center;
+            }
+            .authors-div
+            {
+                margin-left:0;
+                padding-right: 50px;
+                text-align:center;
+            }
+            .names-div
+            {
+                margin-left:0;
+                padding-right: 70px;
+                text-align:center;
+            }
+
+        </style>
+    </head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+            url: "pullreq.php", // Replace with the path to your PHP script
+            type: "GET",
+            dataType: "json",
+            success: function(data) {
+                //var data1=JSON.parse(data)
+                let dis1 =" ";
+                let dis2 =" ";
+                let dis3 =" ";
+                for (i in data) {
+
+                    let html = `<div>
+                                    <p class="names-div">` + data[i].repo_name+`</p>
+                                    
+                                </div>`;
+                    dis1 += html;
+                }
+                $(".names").html(dis1);
+
+                for (i in data) {
+
+                    let html = `<div class="links-div">
+                                    <p><a href='callcomparepage.php?commit_id=`+data[i].commit_id+`'>`+"open" +` </p>
+                        
+                                </div>`;
+                    dis2 += html;
+                }
+                $(".links").html(dis2);
+
+                for (i in data) {
+
+                    let html = `<div>
+                                    <p class="authors-div">` + data[i].username + `</p>
+                                    
+                                </div>`;
+                    dis3 += html;
+                }
+                $(".authors").html(dis3);
+                
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                $(".code-area").html("Error: " + textStatus);
+            }
+            });
+        
+        });
+    </script>
+    <body>
+        <div>
+            <div class="top-div">
+                <div class="top-div-1">
+                    <div class="logo-div">
+                        <img src="github-logo.jpeg" class="logo">
+                    </div>
+                    <div class="name-code-div">
+                        
+                        <p>Nandikka/Samp</p>
+                    </div>
+                </div>
+                <div class="top-div-2">
+                    
+                    <div class="down-border">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="down-div">
+                
+                <form action="commit-code.php" method="post">
+                    <div class="right-div">
+
+                        <div class="top-of-right-div">
+                            <div class="right-title-div">Pull Requests</div>
+                            
+                        </div>
+                        <div class="coding-div">
+                            <div class="coding-div-bottom">
+                                <div name='repo_code' class="code-area">
+                                    <div class="name-div">
+                                        <p class="name">Name</p>
+                                        <div class="names">
+
+                                        </div>
+                                    </div>
+                                    <div class="author-div">
+                                        <p class="author">Author</p>
+                                        <div class="authors">
+                                            
+                                        </div>
+                                    </div> 
+                                    <div class="link-div">
+                                        <p class="link">Link</p>
+                                        <div class="links">
+                                            
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <script>/*
+            function commit()
+            {
+                let code= document.querySelector(".code-area").value;
+                $.ajax({
+                    url: "commit-code.php", // Replace with the path to your PHP script
+                    type: "GET",
+                    dataType: "json",
+                    success: function(data) {
+                        //var data1=JSON.parse(data)
+                        for(i in data){
+                            $(".add-text").html("<a href='callcodepage.php?id="+data[i].repo_id+"\'>"+data[i].repo_name+'</a>');
+                        }
+                        
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        $("#username-p").html("Error: " + textStatus);
+                    }
+                });
+            }
+
+
+
+
+*/
+let i=0;
+            let m=0;
+            let n=0;
+
+            function add_fun() {
+                i++;
+                m++;
+                n++;
+                let dis1 = "";
+                let dis2 =" ";
+                let dis3 =" ";
+                for (let j = 0; j < i; j++) {
+                    
+                    let html = `<div>
+                                    <p class="names-div">name </p>
+                                    
+                                </div>`;
+                    dis1 += html;
+                }
+                document.querySelector(".names").innerHTML = dis1;
+
+                for (let j = 0; j < m; j++) {
+                    
+                    let html = `<div class="links-div">
+                                    <p>name </p>
+                    
+                                </div>`;
+                    dis2 += html;
+                }
+                document.querySelector(".links").innerHTML = dis2;
+
+
+                for (let j = 0; j < n; j++) {
+                    
+                    let html = `<div>
+                                    <p class="authors-div">i dont know wat to   </p>
+                                    
+                                </div>`;
+                    dis3 += html;
+                }
+                document.querySelector(".authors").innerHTML = dis3;
+            }
+
+    
+
+    
+        </script>
+
+    </body>
+</html>
