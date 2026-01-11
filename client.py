@@ -1,5 +1,5 @@
 import socket 
-# Creating Client Socket 
+# Creating Client Socket #
 
 
 
@@ -48,5 +48,6 @@ while True:
 
 
     except IOError: 
+
 
         print('You entered an invalid filename!\ Please enter a valid name')
